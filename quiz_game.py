@@ -74,7 +74,19 @@ class QuizGame:
         print("\n[퀴즈 추가 - 아직 미구현]")
     
     def show_quiz_list(self):
-        print("\n[퀴즈 목록 - 아직 미구현]")
+        """저장된 퀴즈 목록 출력"""
+        if not self.quizzes:
+            print("\n📭 등록된 퀴즈가 없습니다.")
+            return
+        
+        print(f"\n📋 퀴즈 목록 (총 {len(self.quizzes)}개)")
+        print("-" * 40)
+        for i, quiz in enumerate(self.quizzes, 1):
+            print(f"  {i}. {quiz.question}")
+            for j, choice in enumerate(quiz.choices, 1):
+                marker = "✔" if j == quiz.answer else " "
+                print(f"     {j}) {choice} {marker}")
+            print()
     
     def show_score(self):
         print("\n[점수 확인 - 아직 미구현]")
@@ -122,4 +134,4 @@ class QuizGame:
             self.score_history = []
     
     def load_data(self):
-        self.quizzes = get_default_quizzes()  # 임시
+        self.quizzes = get_default_quizzes()
