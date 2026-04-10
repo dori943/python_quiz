@@ -56,6 +56,27 @@
       "hint": "None만의 고유한 타입이 있습니다"
     }
   ],
+<<<<<<< HEAD
   "best_score": null,
   "score_history": []
+=======
+  "best_score": 1,
+  "score_history": [
+    {
+      "date": "2026-04-08 22:34",
+      "total": 1,
+      "score": 0.5
+    },
+    {
+      "date": "2026-04-10 11:46",
+      "total": 1,
+      "score": 1
+    },
+    {
+      "date": "2026-04-10 11:50",
+      "total": 1,
+      "score": 0
+    }
+  ]
+>>>>>>> dd226c0b13f329a34725cfa08d0ca2309c9f9a64
 }
