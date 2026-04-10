@@ -296,6 +296,25 @@ class QuizGame:
         else:
             print("삭제를 취소했습니다.")
     
+    # ─── 퀴즈 초기화 ───
+    def reset_game(self):
+        print("\n⚠️  퀴즈 초기화")
+        print("-" * 40)
+        print("  기본 퀴즈 목록으로 되돌아가고")
+        print("  점수 기록이 모두 삭제됩니다.")
+        print("-" * 40)
+        confirm = input("정말 초기화하시겠습니까? (y/n): ").strip().lower()
+        
+        if confirm == "y":
+            self.quizzes = get_default_quizzes()
+            self.best_score = None
+            self.has_played = False
+            self.score_history = []
+            self.save_data()
+            print("✅ 초기화 완료! 기본 퀴즈 5개로 되돌아왔습니다.")
+        else:
+            print("초기화를 취소했습니다.")
+    
     
     # ─── 저장 / 불러오기 ───
     def save_data(self):
