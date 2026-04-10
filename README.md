@@ -26,8 +26,8 @@
 
 ```bash
 # 저장소 클론
-git clone https://github.com/{username}/{repository}.git
-cd {repository}
+git clone https://github.com/dori943/python_quiz.git
+cd python_quiz
 
 # 실행
 python main.py
